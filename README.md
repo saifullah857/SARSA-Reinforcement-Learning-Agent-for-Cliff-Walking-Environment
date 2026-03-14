@@ -7,7 +7,7 @@
 ![Gymnasium](https://img.shields.io/badge/Environment-Gymnasium-orange)
 ![NumPy](https://img.shields.io/badge/Library-NumPy-blue?logo=numpy)
 ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter)
-![License](https://img.shields.io/badge/License-MIT-red)
+
 
 </p>
 
@@ -156,11 +156,7 @@ Possible extensions for this project:
 * 🔢 NumPy
 * 📓 Jupyter Notebook
 
----
 
-
-
----
 
 # 👨‍💻 Author
 
