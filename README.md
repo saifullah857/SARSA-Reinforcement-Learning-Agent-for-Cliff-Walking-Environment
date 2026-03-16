@@ -1,6 +1,3 @@
-Absolutely! Here’s a **single Markdown-ready README** for your SARSA & Q-Learning project. You can copy-paste it directly into `README.md` in VS Code:
-
-```markdown
 # 🧠 SARSA & Q-Learning Reinforcement Learning Agent for Cliff Walking
 
 <p align="center">
@@ -10,6 +7,7 @@ Absolutely! Here’s a **single Markdown-ready README** for your SARSA & Q-Learn
 ![Gymnasium](https://img.shields.io/badge/Environment-Gymnasium-orange)
 ![NumPy](https://img.shields.io/badge/Library-NumPy-blue?logo=numpy)
 ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter)
+![License](https://img.shields.io/badge/License-MIT-red)
 
 </p>
 
@@ -17,20 +15,21 @@ Absolutely! Here’s a **single Markdown-ready README** for your SARSA & Q-Learn
 
 # 📌 Overview
 
-This project demonstrates **SARSA (State–Action–Reward–State–Action)** and **Q-Learning** algorithms in **Reinforcement Learning**.
+This project demonstrates **SARSA (On-Policy)** and **Q-Learning (Off-Policy)** algorithms in **Reinforcement Learning**.  
 
-The agent is trained in the **Cliff Walking environment** using the **Gymnasium library**, learning optimal policies to **navigate safely from start to goal** while avoiding the cliff, which gives a large negative reward.
+The agent is trained in the **Cliff Walking environment** using **Gymnasium**, learning optimal policies to **navigate safely from start to goal** while avoiding the cliff, which gives a large negative reward.
+
+> 🚀 **Goal:** Safely reach the goal while learning the optimal policy.
 
 ---
 
 # ✨ Key Features
 
-- Implementation of **SARSA (On-Policy)** algorithm  
-- Implementation of **Q-Learning (Off-Policy)** algorithm  
-- Training an agent in the **Cliff Walking grid environment**  
-- **Q-Table based learning** approach  
-- **Epsilon-Greedy exploration strategy**  
-- Policy optimization through **reward maximization**  
+- 🟢 **SARSA (On-Policy)** & **Q-Learning (Off-Policy)** implementation  
+- 🟢 **Q-Table based learning**  
+- 🟢 **Epsilon-Greedy exploration** strategy  
+- 🟢 Safe navigation in **Cliff Walking environment**  
+- 🟢 Reward maximization and policy optimization  
 
 ---
 
@@ -42,9 +41,9 @@ The agent is trained in the **Cliff Walking environment** using the **Gymnasium 
 | Grid Size    | 4 × 12                                               |
 | State Space  | 48 states                                            |
 | Action Space | 4 actions (Up, Down, Left, Right)                   |
-| Goal         | Reach the destination without falling into the cliff |
+| Goal         | Reach destination without falling into the cliff    |
 
-⚠ If the agent falls into the **cliff**, it receives a **large negative reward** and returns to the **starting position**.
+> ⚠ **Warning:** Falling into the cliff gives a **large negative reward** and resets the agent to the start.
 
 ---
 
@@ -58,8 +57,7 @@ The SARSA update rule:
 Q(s,a) = Q(s,a) + \alpha [r + \gamma Q(s',a') - Q(s,a)]
 \]
 
-**Where:**
-
+**Where:**  
 - **s** → Current state  
 - **a** → Current action  
 - **r** → Reward received  
@@ -72,13 +70,13 @@ Q(s,a) = Q(s,a) + \alpha [r + \gamma Q(s',a') - Q(s,a)]
 
 ### 2️⃣ Q-Learning (Off-Policy Learning)
 
-Q-Learning learns the optimal policy regardless of the current action policy:
+Q-Learning update rule:
 
 \[
 Q(s,a) \leftarrow Q(s,a) + \alpha \left[r + \gamma \max_{a'} Q(s',a') - Q(s,a)\right]
 \]
 
-Instead of using the next action from the policy, Q-Learning uses the **maximum possible future reward**, making it **Off-Policy**.
+> Instead of using the next action from the policy, Q-Learning uses the **maximum possible future reward**, making it **Off-Policy**.
 
 ---
 
@@ -102,93 +100,75 @@ Instead of using the next action from the policy, Q-Learning uses the **maximum 
 | Discount Factor (γ)  | 0.99  | 0.99       |
 | Exploration Rate (ε) | 0.1   | 0.1        |
 
+> 📊 **Tip:** You can tune α, γ, and ε to see how the agent's behavior changes.
+
 ---
 
 # 📂 Project Structure
-
-```
-
 sarsa-qlearning-cliffwalking
 │
 ├── SARSA_Code.ipynb
-├── practice-project.ipynb
 ├── Q-Learning.ipynb
+├── practice-project.ipynb
 ├── README.md
-
-````
 
 ---
 
 # 💻 Installation
 
-Install the required dependencies:
-
 ```bash
 pip install gymnasium
 pip install "gymnasium[toy-text]"
 pip install numpy
-````
 
----
+▶️ How to Run
 
-# ▶️ How to Run
-
-### 1️⃣ Clone the repository
-
-```bash
+1️⃣ Clone the repository
 git clone https://github.com/saifullah857/sarsa-qlearning-cliffwalking.git
-```
+2️⃣ Navigate to the project folder
 
-### 2️⃣ Navigate to the project folder
-
-```bash
 cd sarsa-qlearning-cliffwalking
-```
 
-### 3️⃣ Run the notebook
+3️⃣ Run the notebook
 
-```bash
 jupyter notebook
-```
 
-Open **sarsa_qlearning_cliffwalking.ipynb** and run all cells to train both agents.
+Open SARSA_Code.ipynb and Q-Learning.ipynb to train and visualize the agents.
 
----
+🎯 Learning Outcomes
 
-# 🎯 Learning Outcomes
+✅ Fundamentals of Reinforcement Learning
 
-This project demonstrates:
+✅ Implementation of SARSA and Q-Learning
 
-* Fundamentals of **Reinforcement Learning**
-* Implementation of **SARSA and Q-Learning algorithms**
-* Policy learning using **Q-Tables**
-* **Exploration vs Exploitation** strategies
-* Interaction with **Gymnasium RL environments**
+✅ Policy learning using Q-Tables
 
----
+✅ Exploration vs Exploitation strategies
 
-# 🚀 Future Improvements
+✅ Interaction with Gymnasium environments
 
-* Add **reward and training visualization graphs**
-* Implement **Deep Q-Network (DQN)**
-* Test **different exploration strategies**
-* Compare **SARSA vs Q-Learning performance** quantitatively
+🚀 Future Improvements
 
----
+📈 Add reward and training visualization graphs
 
-# 🛠 Technologies Used
+🤖 Implement Deep Q-Network (DQN)
 
-* Python
-* Reinforcement Learning
-* Gymnasium
-* NumPy
-* Jupyter Notebook
+⚡ Test different exploration strategies
 
----
+📊 Compare SARSA vs Q-Learning performance quantitatively
 
-# 👨‍💻 Author
+🛠 Technologies Used
 
-**Saif Ullah**
+Python
 
+Reinforcement Learning
 
+Gymnasium
 
+NumPy
+
+Jupyter Notebook
+
+👨‍💻 Author
+
+Saif Ullah
