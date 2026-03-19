@@ -66,7 +66,7 @@ sarsa-qlearning-cliffwalking/
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/saifullah857/sarsa-qlearning-cliffwalking.git](https://github.com/saifullah857/sarsa-qlearning-cliffwalking.git)
+git clone https://github.com/saifullah857/sarsa-qlearning-cliffwalking.git
 cd sarsa-qlearning-cliffwalking
 
 ```
@@ -97,4 +97,4 @@ jupyter notebook
 ## 👨‍💻 Author
 
 **Saif Ullah**
-*AI/ML Engineer & MERN Stack Developer*
+
